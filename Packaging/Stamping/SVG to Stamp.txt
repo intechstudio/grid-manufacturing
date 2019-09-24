@@ -1,0 +1,18 @@
+1. Import SVG as geometry
+
+2. Switch to the Draft Workbench
+3. Scale the logo to 0.1 (Modify original)
+4. Position the logo in the center
+5. Scale the logo to 2.9 (Modify original)
+6. Position the logo in the center
+7. Create sketch from draft
+
+8. Switch to the Sketcher Workbench
+9. Merge the sketches (text and frame separately)
+
+10. Switch to the Partdesign Workbench
+11. Create a body
+12. Create a sketch on the XY plane with a 50mm*50mm square
+13. Extrude the squere 1.5mm
+14. Put the two sketches of the logo into the body
+15. Extrude the two sketches of the logo in reversed direction 1.5mm
