@@ -68,7 +68,7 @@
             <IsVertical>False</IsVertical>
             <LineTextSpan>
               <TextSpan>
-                <Text>File: ear.stl + cal3</Text>
+                <Text>File: canvas13 + cal3</Text>
                 <FontInfo>
                   <FontName>Segoe UI</FontName>
                   <FontSize>5</FontSize>
@@ -102,7 +102,7 @@
             </LineTextSpan>
             <LineTextSpan>
               <TextSpan>
-                <Text>UV: 16s (2x60s)</Text>
+                <Text>UV: 20s (2x60s)</Text>
                 <FontInfo>
                   <FontName>Segoe UI</FontName>
                   <FontSize>5</FontSize>
@@ -256,7 +256,7 @@
                 </FontInfo>
               </TextSpan>
               <FixedTextSpan>
-                <Text>Jul 3, 2019</Text>
+                <Text>Aug 19, 2019</Text>
                 <FontInfo>
                   <FontName>Segoe UI</FontName>
                   <FontSize>5</FontSize>
@@ -360,7 +360,7 @@
                 </FontInfo>
               </TextSpan>
               <FixedTextSpan>
-                <Text>0002</Text>
+                <Text>0003</Text>
                 <FontInfo>
                   <FontName>Segoe UI</FontName>
                   <FontSize>5</FontSize>
