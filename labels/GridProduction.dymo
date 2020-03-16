@@ -57,160 +57,6 @@
           <Margin>
             <DYMOThickness Left="0" Top="0" Right="0" Bottom="0" />
           </Margin>
-          <HorizontalAlignment>Left</HorizontalAlignment>
-          <VerticalAlignment>Top</VerticalAlignment>
-          <FitMode>None</FitMode>
-          <IsVertical>False</IsVertical>
-          <FormattedText>
-            <FitMode>None</FitMode>
-            <HorizontalAlignment>Left</HorizontalAlignment>
-            <VerticalAlignment>Top</VerticalAlignment>
-            <IsVertical>False</IsVertical>
-            <LineTextSpan>
-              <TextSpan>
-                <Text>Canvas25+ nocal</Text>
-                <FontInfo>
-                  <FontName>Segoe UI</FontName>
-                  <FontSize>5</FontSize>
-                  <IsBold>True</IsBold>
-                  <IsItalic>False</IsItalic>
-                  <IsUnderline>False</IsUnderline>
-                  <FontBrush>
-                    <SolidColorBrush>
-                      <Color A="1" R="0" G="0" B="0"></Color>
-                    </SolidColorBrush>
-                  </FontBrush>
-                </FontInfo>
-              </TextSpan>
-            </LineTextSpan>
-            <LineTextSpan>
-              <TextSpan>
-                <Text>Wanhao Black</Text>
-                <FontInfo>
-                  <FontName>Segoe UI</FontName>
-                  <FontSize>5</FontSize>
-                  <IsBold>True</IsBold>
-                  <IsItalic>False</IsItalic>
-                  <IsUnderline>False</IsUnderline>
-                  <FontBrush>
-                    <SolidColorBrush>
-                      <Color A="1" R="0" G="0" B="0"></Color>
-                    </SolidColorBrush>
-                  </FontBrush>
-                </FontInfo>
-              </TextSpan>
-            </LineTextSpan>
-            <LineTextSpan>
-              <TextSpan>
-                <Text>UV 28s (2x60s)</Text>
-                <FontInfo>
-                  <FontName>Segoe UI</FontName>
-                  <FontSize>5</FontSize>
-                  <IsBold>True</IsBold>
-                  <IsItalic>False</IsItalic>
-                  <IsUnderline>False</IsUnderline>
-                  <FontBrush>
-                    <SolidColorBrush>
-                      <Color A="1" R="0" G="0" B="0"></Color>
-                    </SolidColorBrush>
-                  </FontBrush>
-                </FontInfo>
-              </TextSpan>
-            </LineTextSpan>
-            <LineTextSpan>
-              <TextSpan>
-                <Text>UV 20min</Text>
-                <FontInfo>
-                  <FontName>Segoe UI</FontName>
-                  <FontSize>5</FontSize>
-                  <IsBold>True</IsBold>
-                  <IsItalic>False</IsItalic>
-                  <IsUnderline>False</IsUnderline>
-                  <FontBrush>
-                    <SolidColorBrush>
-                      <Color A="1" R="0" G="0" B="0"></Color>
-                    </SolidColorBrush>
-                  </FontBrush>
-                </FontInfo>
-              </TextSpan>
-            </LineTextSpan>
-            <LineTextSpan>
-              <TextSpan>
-                <Text>@100um</Text>
-                <FontInfo>
-                  <FontName>Segoe UI</FontName>
-                  <FontSize>5</FontSize>
-                  <IsBold>True</IsBold>
-                  <IsItalic>False</IsItalic>
-                  <IsUnderline>False</IsUnderline>
-                  <FontBrush>
-                    <SolidColorBrush>
-                      <Color A="1" R="0" G="0" B="0"></Color>
-                    </SolidColorBrush>
-                  </FontBrush>
-                </FontInfo>
-              </TextSpan>
-            </LineTextSpan>
-            <LineTextSpan>
-              <TextSpan>
-                <Text>CHK 40%-5-2</Text>
-                <FontInfo>
-                  <FontName>Segoe UI</FontName>
-                  <FontSize>5</FontSize>
-                  <IsBold>True</IsBold>
-                  <IsItalic>False</IsItalic>
-                  <IsUnderline>False</IsUnderline>
-                  <FontBrush>
-                    <SolidColorBrush>
-                      <Color A="1" R="0" G="0" B="0"></Color>
-                    </SolidColorBrush>
-                  </FontBrush>
-                </FontInfo>
-              </TextSpan>
-            </LineTextSpan>
-          </FormattedText>
-          <ObjectLayout>
-            <DYMOPoint>
-              <X>0.03999997</X>
-              <Y>0.1</Y>
-            </DYMOPoint>
-            <Size>
-              <Width>0.7487513</Width>
-              <Height>0.5695392</Height>
-            </Size>
-          </ObjectLayout>
-        </TextObject>
-        <DateTimeObject>
-          <Name>IDateTimeObject0</Name>
-          <Brushes>
-            <BackgroundBrush>
-              <SolidColorBrush>
-                <Color A="0" R="0" G="0" B="0"></Color>
-              </SolidColorBrush>
-            </BackgroundBrush>
-            <BorderBrush>
-              <SolidColorBrush>
-                <Color A="1" R="0" G="0" B="0"></Color>
-              </SolidColorBrush>
-            </BorderBrush>
-            <StrokeBrush>
-              <SolidColorBrush>
-                <Color A="1" R="0" G="0" B="0"></Color>
-              </SolidColorBrush>
-            </StrokeBrush>
-            <FillBrush>
-              <SolidColorBrush>
-                <Color A="0" R="0" G="0" B="0"></Color>
-              </SolidColorBrush>
-            </FillBrush>
-          </Brushes>
-          <Rotation>Rotation0</Rotation>
-          <OutlineThickness>1</OutlineThickness>
-          <IsOutlined>False</IsOutlined>
-          <BorderStyle>SolidLine</BorderStyle>
-          <Margin>
-            <DYMOThickness Left="0" Top="0" Right="0" Bottom="0" />
-          </Margin>
           <HorizontalAlignment>Center</HorizontalAlignment>
           <VerticalAlignment>Middle</VerticalAlignment>
           <FitMode>None</FitMode>
@@ -222,40 +68,10 @@
             <IsVertical>False</IsVertical>
             <LineTextSpan>
               <TextSpan>
-                <Text />
+                <Text>Intech Studio Ltd.</Text>
                 <FontInfo>
                   <FontName>Segoe UI</FontName>
-                  <FontSize>5</FontSize>
-                  <IsBold>True</IsBold>
-                  <IsItalic>False</IsItalic>
-                  <IsUnderline>False</IsUnderline>
-                  <FontBrush>
-                    <SolidColorBrush>
-                      <Color A="1" R="0" G="0" B="0"></Color>
-                    </SolidColorBrush>
-                  </FontBrush>
-                </FontInfo>
-              </TextSpan>
-              <FixedTextSpan>
-                <Text>18-Sep-2019</Text>
-                <FontInfo>
-                  <FontName>Segoe UI</FontName>
-                  <FontSize>5</FontSize>
-                  <IsBold>True</IsBold>
-                  <IsItalic>False</IsItalic>
-                  <IsUnderline>False</IsUnderline>
-                  <FontBrush>
-                    <SolidColorBrush>
-                      <Color A="1" R="0" G="0" B="0"></Color>
-                    </SolidColorBrush>
-                  </FontBrush>
-                </FontInfo>
-              </FixedTextSpan>
-              <TextSpan>
-                <Text />
-                <FontInfo>
-                  <FontName>Segoe UI</FontName>
-                  <FontSize>5</FontSize>
+                  <FontSize>4</FontSize>
                   <IsBold>True</IsBold>
                   <IsItalic>False</IsItalic>
                   <IsUnderline>False</IsUnderline>
@@ -267,69 +83,12 @@
                 </FontInfo>
               </TextSpan>
             </LineTextSpan>
-          </FormattedText>
-          <Prefix />
-          <Postfix />
-          <Format>DayAbbrMonthLongYear</Format>
-          <Use24HourTime>False</Use24HourTime>
-          <TimeFormat>Date</TimeFormat>
-          <ObjectLayout>
-            <DYMOPoint>
-              <X>0.04999997</X>
-              <Y>0.8108767</Y>
-            </DYMOPoint>
-            <Size>
-              <Width>0.5908347</Width>
-              <Height>0.125</Height>
-            </Size>
-          </ObjectLayout>
-        </DateTimeObject>
-        <CounterObject>
-          <Name>ICounterObject0</Name>
-          <Brushes>
-            <BackgroundBrush>
-              <SolidColorBrush>
-                <Color A="0" R="0" G="0" B="0"></Color>
-              </SolidColorBrush>
-            </BackgroundBrush>
-            <BorderBrush>
-              <SolidColorBrush>
-                <Color A="1" R="0" G="0" B="0"></Color>
-              </SolidColorBrush>
-            </BorderBrush>
-            <StrokeBrush>
-              <SolidColorBrush>
-                <Color A="1" R="0" G="0" B="0"></Color>
-              </SolidColorBrush>
-            </StrokeBrush>
-            <FillBrush>
-              <SolidColorBrush>
-                <Color A="0" R="0" G="0" B="0"></Color>
-              </SolidColorBrush>
-            </FillBrush>
-          </Brushes>
-          <Rotation>Rotation0</Rotation>
-          <OutlineThickness>1</OutlineThickness>
-          <IsOutlined>False</IsOutlined>
-          <BorderStyle>SolidLine</BorderStyle>
-          <Margin>
-            <DYMOThickness Left="0" Top="0" Right="0" Bottom="0" />
-          </Margin>
-          <HorizontalAlignment>Center</HorizontalAlignment>
-          <VerticalAlignment>Top</VerticalAlignment>
-          <FitMode>None</FitMode>
-          <IsVertical>False</IsVertical>
-          <FormattedText>
-            <FitMode>None</FitMode>
-            <HorizontalAlignment>Center</HorizontalAlignment>
-            <VerticalAlignment>Top</VerticalAlignment>
-            <IsVertical>False</IsVertical>
             <LineTextSpan>
               <TextSpan>
-                <Text>S/N: </Text>
+                <Text>https://intech.studio/</Text>
                 <FontInfo>
                   <FontName>Segoe UI</FontName>
-                  <FontSize>5</FontSize>
+                  <FontSize>4</FontSize>
                   <IsBold>True</IsBold>
                   <IsItalic>False</IsItalic>
                   <IsUnderline>False</IsUnderline>
@@ -340,26 +99,13 @@
                   </FontBrush>
                 </FontInfo>
               </TextSpan>
-              <FixedTextSpan>
-                <Text>0003</Text>
-                <FontInfo>
-                  <FontName>Segoe UI</FontName>
-                  <FontSize>5</FontSize>
-                  <IsBold>True</IsBold>
-                  <IsItalic>False</IsItalic>
-                  <IsUnderline>False</IsUnderline>
-                  <FontBrush>
-                    <SolidColorBrush>
-                      <Color A="1" R="0" G="0" B="0"></Color>
-                    </SolidColorBrush>
-                  </FontBrush>
-                </FontInfo>
-              </FixedTextSpan>
+            </LineTextSpan>
+            <LineTextSpan>
               <TextSpan>
-                <Text />
+                <Text>Made in EU</Text>
                 <FontInfo>
                   <FontName>Segoe UI</FontName>
-                  <FontSize>5</FontSize>
+                  <FontSize>4</FontSize>
                   <IsBold>True</IsBold>
                   <IsItalic>False</IsItalic>
                   <IsUnderline>False</IsUnderline>
@@ -372,68 +118,17 @@
               </TextSpan>
             </LineTextSpan>
           </FormattedText>
-          <Prefix>S/N: </Prefix>
-          <Postfix />
-          <StartAt>1</StartAt>
-          <Increment>1</Increment>
-          <TextWidth>4</TextWidth>
-          <PrintLeadingZeros>True</PrintLeadingZeros>
           <ObjectLayout>
             <DYMOPoint>
-              <X>0.04999997</X>
-              <Y>0.7410349</Y>
+              <X>0.04149834</X>
+              <Y>0.2804777</Y>
             </DYMOPoint>
             <Size>
-              <Width>0.6396179</Width>
-              <Height>0.133173</Height>
+              <Width>0.8963544</Width>
+              <Height>0.2630209</Height>
             </Size>
           </ObjectLayout>
-        </CounterObject>
-        <LineObject>
-          <Name>ILineObject0</Name>
-          <Brushes>
-            <BackgroundBrush>
-              <SolidColorBrush>
-                <Color A="0" R="0" G="0" B="0"></Color>
-              </SolidColorBrush>
-            </BackgroundBrush>
-            <BorderBrush>
-              <SolidColorBrush>
-                <Color A="1" R="0" G="0" B="0"></Color>
-              </SolidColorBrush>
-            </BorderBrush>
-            <StrokeBrush>
-              <SolidColorBrush>
-                <Color A="1" R="0" G="0" B="0"></Color>
-              </SolidColorBrush>
-            </StrokeBrush>
-            <FillBrush>
-              <SolidColorBrush>
-                <Color A="0" R="0" G="0" B="0"></Color>
-              </SolidColorBrush>
-            </FillBrush>
-          </Brushes>
-          <Rotation>Rotation0</Rotation>
-          <OutlineThickness>1</OutlineThickness>
-          <IsOutlined>False</IsOutlined>
-          <BorderStyle>SolidLine</BorderStyle>
-          <Margin>
-            <DYMOThickness Left="0" Top="0" Right="0" Bottom="0" />
-          </Margin>
-          <StrokeWidth>1</StrokeWidth>
-          <DashPattern>SolidLine</DashPattern>
-          <LineType>Horizontal</LineType>
-          <ObjectLayout>
-            <DYMOPoint>
-              <X>0.03999997</X>
-              <Y>0.5465523</Y>
-            </DYMOPoint>
-            <Size>
-              <Width>0.6062519</Width>
-              <Height>0.3889652</Height>
-            </Size>
-          </ObjectLayout>
-        </LineObject>
+        </TextObject>
         <ImageObject>
           <Name>IImageObject0</Name>
           <Brushes>
@@ -471,8 +166,8 @@
           <VerticalAlignment>Middle</VerticalAlignment>
           <ObjectLayout>
             <DYMOPoint>
-              <X>0.6929921</X>
-              <Y>0.1756694</Y>
+              <X>0.6963028</X>
+              <Y>0.5963547</Y>
             </DYMOPoint>
             <Size>
               <Width>0.2298436</Width>
@@ -517,12 +212,12 @@
           <VerticalAlignment>Middle</VerticalAlignment>
           <ObjectLayout>
             <DYMOPoint>
-              <X>0.6993008</X>
-              <Y>0.7007722</Y>
+              <X>0.673665</X>
+              <Y>0.7734675</Y>
             </DYMOPoint>
             <Size>
-              <Width>0.2172254</Width>
-              <Height>0.1693493</Height>
+              <Width>0.2751192</Width>
+              <Height>0.1796622</Height>
             </Size>
           </ObjectLayout>
         </ImageObject>
@@ -563,21 +258,121 @@
           <VerticalAlignment>Middle</VerticalAlignment>
           <ObjectLayout>
             <DYMOPoint>
-              <X>0.6949888</X>
-              <Y>0.3527822</Y>
+              <X>0.4729579</X>
+              <Y>0.566936</Y>
             </DYMOPoint>
             <Size>
-              <Width>0.2298429</Width>
-              <Height>0.3158343</Height>
+              <Width>0.2350512</Width>
+              <Height>0.373064</Height>
             </Size>
           </ObjectLayout>
         </ImageObject>
+        <QRCodeObject>
+          <Name>IQRCodeObject0</Name>
+          <Brushes>
+            <BackgroundBrush>
+              <SolidColorBrush>
+                <Color A="1" R="1" G="1" B="1"></Color>
+              </SolidColorBrush>
+            </BackgroundBrush>
+            <BorderBrush>
+              <SolidColorBrush>
+                <Color A="1" R="0" G="0" B="0"></Color>
+              </SolidColorBrush>
+            </BorderBrush>
+            <StrokeBrush>
+              <SolidColorBrush>
+                <Color A="1" R="0" G="0" B="0"></Color>
+              </SolidColorBrush>
+            </StrokeBrush>
+            <FillBrush>
+              <SolidColorBrush>
+                <Color A="1" R="0" G="0" B="0"></Color>
+              </SolidColorBrush>
+            </FillBrush>
+          </Brushes>
+          <Rotation>Rotation0</Rotation>
+          <OutlineThickness>1</OutlineThickness>
+          <IsOutlined>False</IsOutlined>
+          <BorderStyle>SolidLine</BorderStyle>
+          <Margin>
+            <DYMOThickness Left="0" Top="0" Right="0" Bottom="0" />
+          </Margin>
+          <BarcodeFormat>QRCode</BarcodeFormat>
+          <Data>
+            <DataString>URL:grid.intech.studio/start</DataString>
+          </Data>
+          <HorizontalAlignment>Center</HorizontalAlignment>
+          <VerticalAlignment>Middle</VerticalAlignment>
+          <Size>Small</Size>
+          <EQRCodeType>QRCodeWebPage</EQRCodeType>
+          <WebAddressDataHolder>
+            <MultiDataString>
+              <DataString>grid.intech.studio/start</DataString>
+            </MultiDataString>
+          </WebAddressDataHolder>
+          <ObjectLayout>
+            <DYMOPoint>
+              <X>0.04149835</X>
+              <Y>0.5680985</Y>
+            </DYMOPoint>
+            <Size>
+              <Width>0.424116</Width>
+              <Height>0.362425</Height>
+            </Size>
+          </ObjectLayout>
+        </QRCodeObject>
+        <ShapeObject>
+          <Name>IShapeObject0</Name>
+          <Brushes>
+            <BackgroundBrush>
+              <SolidColorBrush>
+                <Color A="0" R="0" G="0" B="0"></Color>
+              </SolidColorBrush>
+            </BackgroundBrush>
+            <BorderBrush>
+              <SolidColorBrush>
+                <Color A="1" R="0" G="0" B="0"></Color>
+              </SolidColorBrush>
+            </BorderBrush>
+            <StrokeBrush>
+              <SolidColorBrush>
+                <Color A="1" R="0" G="0" B="0"></Color>
+              </SolidColorBrush>
+            </StrokeBrush>
+            <FillBrush>
+              <SolidColorBrush>
+                <Color A="1" R="0" G="0" B="0"></Color>
+              </SolidColorBrush>
+            </FillBrush>
+          </Brushes>
+          <Rotation>Rotation0</Rotation>
+          <OutlineThickness>1</OutlineThickness>
+          <IsOutlined>False</IsOutlined>
+          <BorderStyle>SolidLine</BorderStyle>
+          <Margin>
+            <DYMOThickness Left="0" Top="0" Right="0" Bottom="0" />
+          </Margin>
+          <StrokeWidth>1</StrokeWidth>
+          <DashPattern>SolidLine</DashPattern>
+          <ShapeType>Rectangle</ShapeType>
+          <ObjectLayout>
+            <DYMOPoint>
+              <X>0.1541666</X>
+              <Y>0.1162383</Y>
+            </DYMOPoint>
+            <Size>
+              <Width>0.6959662</Width>
+              <Height>0.1476151</Height>
+            </Size>
+          </ObjectLayout>
+        </ShapeObject>
         <TextObject>
           <Name>ITextObject01</Name>
           <Brushes>
             <BackgroundBrush>
               <SolidColorBrush>
-                <Color A="0" R="0" G="0" B="0"></Color>
+                <Color A="1" R="1" G="1" B="1"></Color>
               </SolidColorBrush>
             </BackgroundBrush>
             <BorderBrush>
@@ -603,21 +398,21 @@
           <Margin>
             <DYMOThickness Left="0" Top="0" Right="0" Bottom="0" />
           </Margin>
-          <HorizontalAlignment>Left</HorizontalAlignment>
-          <VerticalAlignment>Top</VerticalAlignment>
+          <HorizontalAlignment>Center</HorizontalAlignment>
+          <VerticalAlignment>Middle</VerticalAlignment>
           <FitMode>None</FitMode>
           <IsVertical>False</IsVertical>
           <FormattedText>
             <FitMode>None</FitMode>
-            <HorizontalAlignment>Left</HorizontalAlignment>
-            <VerticalAlignment>Top</VerticalAlignment>
+            <HorizontalAlignment>Center</HorizontalAlignment>
+            <VerticalAlignment>Middle</VerticalAlignment>
             <IsVertical>False</IsVertical>
             <LineTextSpan>
               <TextSpan>
-                <Text />
+                <Text>GRID</Text>
                 <FontInfo>
                   <FontName>Segoe UI</FontName>
-                  <FontSize>4</FontSize>
+                  <FontSize>5</FontSize>
                   <IsBold>True</IsBold>
                   <IsItalic>False</IsItalic>
                   <IsUnderline>False</IsUnderline>
@@ -632,15 +427,120 @@
           </FormattedText>
           <ObjectLayout>
             <DYMOPoint>
-              <X>0.6666268</X>
-              <Y>0.1072946</Y>
+              <X>0.1596173</X>
+              <Y>0.1247205</Y>
             </DYMOPoint>
             <Size>
-              <Width>0.2767064</Width>
-              <Height>0.8068093</Height>
+              <Width>0.3112827</Width>
+              <Height>0.1306508</Height>
             </Size>
           </ObjectLayout>
         </TextObject>
+        <CounterObject>
+          <Name>ICounterObject0</Name>
+          <Brushes>
+            <BackgroundBrush>
+              <SolidColorBrush>
+                <Color A="1" R="0" G="0" B="0"></Color>
+              </SolidColorBrush>
+            </BackgroundBrush>
+            <BorderBrush>
+              <SolidColorBrush>
+                <Color A="1" R="0" G="0" B="0"></Color>
+              </SolidColorBrush>
+            </BorderBrush>
+            <StrokeBrush>
+              <SolidColorBrush>
+                <Color A="1" R="0" G="0" B="0"></Color>
+              </SolidColorBrush>
+            </StrokeBrush>
+            <FillBrush>
+              <SolidColorBrush>
+                <Color A="0" R="0" G="0" B="0"></Color>
+              </SolidColorBrush>
+            </FillBrush>
+          </Brushes>
+          <Rotation>Rotation0</Rotation>
+          <OutlineThickness>1</OutlineThickness>
+          <IsOutlined>False</IsOutlined>
+          <BorderStyle>SolidLine</BorderStyle>
+          <Margin>
+            <DYMOThickness Left="0" Top="0" Right="0" Bottom="0" />
+          </Margin>
+          <HorizontalAlignment>Center</HorizontalAlignment>
+          <VerticalAlignment>Middle</VerticalAlignment>
+          <FitMode>None</FitMode>
+          <IsVertical>False</IsVertical>
+          <FormattedText>
+            <FitMode>None</FitMode>
+            <HorizontalAlignment>Center</HorizontalAlignment>
+            <VerticalAlignment>Middle</VerticalAlignment>
+            <IsVertical>False</IsVertical>
+            <LineTextSpan>
+              <TextSpan>
+                <Text>S/N:</Text>
+                <FontInfo>
+                  <FontName>Segoe UI</FontName>
+                  <FontSize>4</FontSize>
+                  <IsBold>True</IsBold>
+                  <IsItalic>False</IsItalic>
+                  <IsUnderline>False</IsUnderline>
+                  <FontBrush>
+                    <SolidColorBrush>
+                      <Color A="1" R="1" G="1" B="1"></Color>
+                    </SolidColorBrush>
+                  </FontBrush>
+                </FontInfo>
+              </TextSpan>
+              <FixedTextSpan>
+                <Text>0015</Text>
+                <FontInfo>
+                  <FontName>Segoe UI</FontName>
+                  <FontSize>4</FontSize>
+                  <IsBold>True</IsBold>
+                  <IsItalic>False</IsItalic>
+                  <IsUnderline>False</IsUnderline>
+                  <FontBrush>
+                    <SolidColorBrush>
+                      <Color A="1" R="1" G="1" B="1"></Color>
+                    </SolidColorBrush>
+                  </FontBrush>
+                </FontInfo>
+              </FixedTextSpan>
+              <TextSpan>
+                <Text>-g</Text>
+                <FontInfo>
+                  <FontName>Segoe UI</FontName>
+                  <FontSize>4</FontSize>
+                  <IsBold>True</IsBold>
+                  <IsItalic>False</IsItalic>
+                  <IsUnderline>False</IsUnderline>
+                  <FontBrush>
+                    <SolidColorBrush>
+                      <Color A="1" R="1" G="1" B="1"></Color>
+                    </SolidColorBrush>
+                  </FontBrush>
+                </FontInfo>
+              </TextSpan>
+            </LineTextSpan>
+          </FormattedText>
+          <Prefix>S/N:</Prefix>
+          <Postfix>-g</Postfix>
+          <StartAt>15</StartAt>
+          <Increment>1</Increment>
+          <TextWidth>4</TextWidth>
+          <PrintLeadingZeros>True</PrintLeadingZeros>
+          <ObjectLayout>
+            <DYMOPoint>
+              <X>0.4695634</X>
+              <Y>0.1162383</Y>
+            </DYMOPoint>
+            <Size>
+              <Width>0.3799748</Width>
+              <Height>0.1315372</Height>
+            </Size>
+          </ObjectLayout>
+        </CounterObject>
       </LabelObjects>
     </DynamicLayoutManager>
   </DYMOLabel>
