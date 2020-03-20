@@ -143,46 +143,86 @@ double readThermocoupleOvesample(int num) {
 }
 
 
-void displayRefresh(byte a, byte b, byte c, byte d, long wait=0){
+void displayRefresh(byte a, byte b, byte c, byte d, long wait, int sound){
 
-byte disp[4]={d, c, b, a};
-byte active=0;
-byte i=0;
+  byte disp[4]={d, c, b, a};
+  byte active=0;
+  byte i=0;
+  
+    while(wait>0){
+    
+      // ACTIVATE SELECTED DIGIT
+      digitalWrite(2, HIGH);
+      digitalWrite(3, HIGH);
+      digitalWrite(4, HIGH);
+      digitalWrite(5, HIGH);
+      
+      // SEND SEGMENT DATA
+      //digitalWrite(13,  disp[active]&B00000001); // a
+      digitalWrite(12,  disp[active]&B00000010); // b
+      digitalWrite(11,  disp[active]&B00000100); // c
+      digitalWrite(10,  disp[active]&B00001000); // d
+      digitalWrite(9 , disp[active]&B00010000); // e
+      digitalWrite(8 , disp[active]&B00100000); // f
+      digitalWrite(7 , disp[active]&B01000000); // g
+      digitalWrite(6 , disp[active]&B10000000); // dp
+      digitalWrite(active+2, LOW);
 
-while(wait>0){
+      if (sound){
+        
+          pinMode(A3, OUTPUT);
+          delayMicroseconds(500);
+          digitalWrite(A3, HIGH);
+          delayMicroseconds(500);
+          digitalWrite(A3, LOW);
+          
+          pinMode(A3, INPUT_PULLUP);
+          
+      }
+      else{
+        
+         delay(1);
+      }
 
-// ACTIVATE SELECTED DIGIT
-digitalWrite(2, HIGH);
-digitalWrite(3, HIGH);
-digitalWrite(4, HIGH);
-digitalWrite(5, HIGH);
-
-// SEND SEGMENT DATA
-//digitalWrite(13,  disp[active]&B00000001); // a
-digitalWrite(12,  disp[active]&B00000010); // b
-digitalWrite(11,  disp[active]&B00000100); // c
-digitalWrite(10,  disp[active]&B00001000); // d
-digitalWrite(9 , disp[active]&B00010000); // e
-digitalWrite(8 , disp[active]&B00100000); // f
-digitalWrite(7 , disp[active]&B01000000); // g
-digitalWrite(6 , disp[active]&B10000000); // dp
-digitalWrite(active+2, LOW);
-delay(1);
-active++;
-active=active%4;
-wait--;  
-}
-
-digitalWrite(2, HIGH);
-digitalWrite(3, HIGH);
-digitalWrite(4, HIGH);
-digitalWrite(5, HIGH);
+      
+      active++;
+      active=active%4;
+      wait--;  
+    }
+  
+  digitalWrite(2, HIGH);
+  digitalWrite(3, HIGH);
+  digitalWrite(4, HIGH);
+  digitalWrite(5, HIGH);
 }
 
 void setup() {
   
-  delay(500);
+ //delay(500);
+  pinMode(0, OUTPUT);
+  
+  pinMode(A3, OUTPUT);
+  
+  for (int i=0; i<200; i++){
+    digitalWrite(A3, HIGH);
+    delayMicroseconds(500);
+    digitalWrite(A3, LOW);
+    delayMicroseconds(500);
+    
+  }
 
+  delay(100);
+
+  for (int i=0; i<200; i++){
+    digitalWrite(A3, HIGH);
+    delayMicroseconds(500);
+    digitalWrite(A3, LOW);
+    delayMicroseconds(500);
+    
+  }
+
+  pinMode(A3, INPUT_PULLUP);
+  
   Serial.begin(115200);
 
   // DIGIT SELECT
@@ -206,6 +246,9 @@ void setup() {
   pinMode(A3, INPUT_PULLUP);
   pinMode(A4, INPUT_PULLUP);
   pinMode(A5, INPUT_PULLUP);
+
+
+
 
 
 
@@ -340,10 +383,10 @@ void loop() {
       heat(ON);
     }
     
-    displayRefresh(number[value/100%10],number[value/10%10],number[value%10],C,pwm);
+    displayRefresh(number[value/100%10],number[value/10%10],number[value%10],C,pwm, loopcounter>350);
 
     heat(OFF);
-    displayRefresh(number[value/100%10],number[value/10%10],number[value%10],C,1000-pwm);
+    displayRefresh(number[value/100%10],number[value/10%10],number[value%10],C,1000-pwm, loopcounter>350);
 
 
     if (loopcounter<430-1){
@@ -412,7 +455,7 @@ void loop() {
       encA=digitalRead(A4);
       encB=digitalRead(A5);
 
-      displayRefresh(T,P,MINUS,number[encV%10],4);
+      displayRefresh(T,P,MINUS,number[encV%10],4, 0);
       
     }
   }
@@ -423,10 +466,10 @@ void loop() {
     while(!digitalRead(A3));
     heat(ON);
     while (state==2){
-      displayRefresh(SPACE,P,R,E,1000);
+      displayRefresh(SPACE,P,R,E,1000, 0);
       temp=readThermocouple();
       stamp();
-      displayRefresh(number[temp/100%10],number[temp/10%10],number[temp%10],C,1000);
+      displayRefresh(number[temp/100%10],number[temp/10%10],number[temp%10],C,1000, 0);
       temp=readThermocouple();
       stamp();    
       // PREHEAT DONE!
@@ -449,12 +492,12 @@ void loop() {
     while(!digitalRead(A3));
     while (state==3){
       heat(ON); 
-      displayRefresh(S,O,A,K,1000);
+      displayRefresh(S,O,A,K,1000,0);
       temp=readThermocouple();
       stamp();
 
       heat(OFF); 
-      displayRefresh(number[temp/100%10],number[temp/10%10],number[temp%10],C,1000);
+      displayRefresh(number[temp/100%10],number[temp/10%10],number[temp%10],C,1000,0);
       temp=readThermocouple();
       stamp();   
        
@@ -478,12 +521,12 @@ void loop() {
     while(!digitalRead(A3));
     while (state==4){
       heat(ON); 
-      displayRefresh(F,L,O,W,1000);
+      displayRefresh(F,L,O,W,1000,0);
       temp=readThermocouple();
       stamp();
 
       heat(ON); 
-      displayRefresh(number[temp/100%10],number[temp/10%10],number[temp%10],C,1000);
+      displayRefresh(number[temp/100%10],number[temp/10%10],number[temp%10],C,1000,0);
       temp=readThermocouple();
       stamp();   
        
@@ -505,12 +548,12 @@ void loop() {
     while(!digitalRead(A3));
     while (state==5){
       heat(OFF); 
-      displayRefresh(C,O,O,L,1000);
+      displayRefresh(C,O,O,L,1000,0);
       temp=readThermocouple();
       stamp();
 
       heat(OFF); 
-      displayRefresh(number[temp/100%10],number[temp/10%10],number[temp%10],C,1000);
+      displayRefresh(number[temp/100%10],number[temp/10%10],number[temp%10],C,1000,0);
       temp=readThermocouple();
       stamp();   
        
@@ -532,12 +575,12 @@ void loop() {
     while(!digitalRead(A3));
     byte b=0;
     while(b<200){
-    displayRefresh(D,O,N,E,4);
+    displayRefresh(D,O,N,E,4,0);
     if (!digitalRead(A3)){state=0;}
     b++;}
     b=0;
     while(b<200){
-    displayRefresh(SPACE,SPACE,SPACE,SPACE,4);
+    displayRefresh(SPACE,SPACE,SPACE,SPACE,4,0);
     if (!digitalRead(A3)){state=0;}
     b++;}
   }
