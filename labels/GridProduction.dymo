@@ -493,7 +493,7 @@
                 </FontInfo>
               </TextSpan>
               <FixedTextSpan>
-                <Text>0015</Text>
+                <Text>0082</Text>
                 <FontInfo>
                   <FontName>Segoe UI</FontName>
                   <FontSize>4</FontSize>
@@ -508,7 +508,7 @@
                 </FontInfo>
               </FixedTextSpan>
               <TextSpan>
-                <Text>-g</Text>
+                <Text>-j</Text>
                 <FontInfo>
                   <FontName>Segoe UI</FontName>
                   <FontSize>4</FontSize>
@@ -525,8 +525,8 @@
             </LineTextSpan>
           </FormattedText>
           <Prefix>S/N:</Prefix>
-          <Postfix>-g</Postfix>
-          <StartAt>15</StartAt>
+          <Postfix>-j</Postfix>
+          <StartAt>80</StartAt>
           <Increment>1</Increment>
           <TextWidth>4</TextWidth>
           <PrintLeadingZeros>True</PrintLeadingZeros>
