@@ -1,0 +1,132 @@
+
+
+<!doctype html>
+<html>
+
+  <style>
+    html, body {
+    	height: 100%;
+		margin: 0px;
+    overflow:hidden;
+	}
+	.container {
+		height: calc(100% - 140px);
+	}
+  .minimallink{
+    color: #fff;
+    text-decoration: none;
+  }
+  .minimallink:hover{
+    color: #fff;
+    text-decoration: underline;
+  }
+</style>
+
+
+<body style="padding: 0px;">
+  <label>
+    <div>
+
+      IP:
+      <input type="text" id="ip" value="192.168.1">
+      From:  
+      <input type="text" id="from" value="0">
+      To: <input type="text" id="to" value="20">
+      <button id='b' onclick='scan()'>Scan</button>
+    </div>
+  </label>
+
+  <div id='c' style='background:#000; color: #fff; font-family:monospace; padding: 5px; margin-top:0; height: 100px; overflow-y: auto; '>
+  </div>
+  
+  <div id='demo' style='background:#444; color: #fff; font-family:monospace; padding: 5px; margin-top:0; display: none;'>
+  </div>
+  
+  <iframe id="psxl_iframe" class="container" src="" style="width: calc(32% - 3px); border: none;" title="W3Schools Free Online Web Tutorials">
+  </iframe>  
+
+  <iframe id="psxl4k_iframe" class="container" src="" style="width: calc(32% - 3px); border: none;" title="W3Schools Free Online Web Tutorials">
+  </iframe>
+
+  <iframe id="ugscnc_iframe" class="container" src="" style="width: calc(32% - 3px); border: none;" title="W3Schools Free Online Web Tutorials">
+  </iframe>
+
+<script src='./src/utils.js'></script>
+<script src='./src/db.js'></script>
+<script src='./src/host_scan.js'></script>
+<script src='./src/device_scan.js'></script>
+
+<script>
+
+  function log(s) {
+    c.innerHTML = '<div>'+s+'</div>' + c.innerHTML;
+  }
+
+
+  function scan() {
+    //b.style.display = 'none';
+    c.innerHTML = '';
+    c.style.display = 'block';
+
+
+    var range = function(ip, start, end) {
+      var addrs = [];
+      while (start <= end) addrs.push(ip+'.'+start++);
+      return addrs;
+    }
+    //var addrs = range('172.16.10', 1, 80).concat(range('172.16.10', 0, 50)).concat(range('10.6.0', 0, 255))
+
+    var ip =  document.getElementById("ip").value;
+    var from =  parseInt(document.getElementById("from").value);
+    var to =  parseInt(document.getElementById("to").value);
+
+
+    var toFingerprint = range(ip, from, to);
+
+
+    lan.DeviceScan.start(toFingerprint, {
+          found: function(address, fingerprint) {
+
+            if (fingerprint == "Phrozen Shuffle XL"){
+              psxl_iframe.src = "http://"+address;
+              log(fingerprint+": <a class='minimallink' target='_BLANK' href='http://"+address+"'>"+address+"</a>");
+            }
+            else if (fingerprint == "Phrozen Sonic XL 4k"){
+              psxl4k_iframe.src = "http://"+address;
+              log(fingerprint+": <a class='minimallink' target='_BLANK' href='http://"+address+"'>"+address+"</a>");
+
+            }
+            else if (fingerprint == "UGS CNC Router"){
+              ugscnc_iframe.src = "http://"+address+":8080";
+              log(fingerprint+": <a class='minimallink' target='_BLANK' href='http://"+address+":8080'>"+address+":8080</a>");
+
+            }
+            else{
+              
+              log(fingerprint+": <a class='minimallink' target='_BLANK' href='http://"+address+"'>"+address+"</a>");
+
+            }
+
+
+            
+          },
+            complete: function(results) {
+
+            //log("Fingerprinting Done");
+          },
+            hostup: function(address) {
+
+              log("UP: <a class='minimallink' target='_BLANK' href='http://"+address+"'>"+address+"</a>");
+          },
+            hostdown: function(address) {
+
+              //log("TIMEOUT: "+address);
+          }
+
+        });
+
+    
+  }
+  </script>
+</body>
+</html>

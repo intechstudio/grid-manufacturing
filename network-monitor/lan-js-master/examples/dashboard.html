@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+  	<script src='../build/lan.js'></script>
+    <script>
+      function log(c, s) {
+        c.innerHTML += '<div>'+s+'</div>';
+      }
+
+      lan.IpDiscovery.start(function(error, ip) {
+        // if (!ip.match(/192.168.0/))return;
+        if (error) return;
+        var mask = ip.replace(/\d+$/, '');
+        var range = [];
+
+        for (var i = 0; i < 256; i++) {
+          range.push(mask+i);
+        }
+
+        var div = document.createElement('div');
+        div.setAttribute('style', 'background:#000; color: #fff; font-family:monospace; padding: 5px;padding-bottom:20px;margin-bottom:15px;position:relative;');
+        document.body.appendChild(div);
+        log(div, '<div class=load style="background-image:url(https://i1.wp.com/cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/fancybox_loading.gif);background-position: center bottom; background-repeat:no-repeat;background-size: 12px 12px;position:absolute;bottom: 5px;width:20px;height:20px;"></div>')
+        log(div, "<span style='color:#ccc'>Internal IP address detected: "+ip+"</span>");
+        log(div, "<span style='color:#ccc'>Scanning "+mask+"0 - "+mask+"255</span>");
+
+        // new lan.HostScan(range, {batchSize: 125}).start({
+        //   // found: function(address, fingerprint) {
+        //   //   log(div, "["+address+"] Found device: "+fingerprint);
+        //   // },
+        //   // complete: function(results) {
+        //   //   log(div, "Scan complete.")
+        //   // },
+        //   // hostup: function(address) {
+        //   //   log(div, "Host up: "+address);
+        //   // },
+        //   stream: function(addr, state, duration) {
+        //     if (state == 'up')
+        //       log(div, addr.replace(/:\d+$/, '')+" - " +state.toUpperCase());
+        //   },
+        //   complete: function() {
+        //     log(div, "<span style='color:#0f0'>Scan complete.</span>");
+        //     div.querySelector('.load').style.display = 'none';
+        //     div.style.paddingBottom = 0;
+        //   }
+        // });
+
+new lan.DeviceScan(range).start({
+  found: function(address, fingerprint) {
+    log(div, "["+address+"] Found device: "+fingerprint);
+  },
+  hostup: function(address) {
+    log(div, "Host up: "+address);
+  },
+  // stream: function(addr, state, duration) {
+  //   if (state == 'up')
+  //     log(div, addr.replace(/:\d+$/, '')+" - " +state.toUpperCase());
+  // },
+  complete: function() {
+    log(div, "<span style='color:#0f0'>Scan complete.</span>");
+    div.querySelector('.load').style.display = 'none';
+    div.style.paddingBottom = 0;
+  }
+});
+      });
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
