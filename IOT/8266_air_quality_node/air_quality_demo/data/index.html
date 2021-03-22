@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<!-- 
+  Rui Santos
+  Complete project details at https://RandomNerdTutorials.com  
+-->
+<html>
+<head>
+  <title>ESP8266 Web Server</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <p>GPIO state<strong id="led"> %STATE%</strong></p>
+  <p>
+    <button onclick="led_on();" class="button">ON</button>
+    <button onclick="led_off();" class="button button2">OFF</button>
+  </p>  
+  <p>
+    <span class="sensor-labels">RSSI</span>
+    <span id="rssi">%RSSI%</span>
+    <sup class="units">dBm</sup>
+  </p>
+  <p>
+    <span class="sensor-labels">Temperature (20-50)</span>
+    <span id="temperature">%TEMPERATURE%</span>
+    <sup class="units">&deg;C</sup>
+
+    <br>
+    <svg height="50" width="250" viewBox="0 0 250 50" class="chart">
+     <polyline id="chart_temperature"
+     fill="none"
+     stroke="#0074d9"
+     stroke-width="3"
+     points="0,0 20,40, 40,32 60,45, 80,20"/>
+    </svg>
+  </p>
+  <p>
+    <span class="sensor-labels">Humidity (0-100)</span>
+    <span id="humidity">%HUMIDITY%</span>
+    <sup class="units">&#37;</sup>
+
+    <br>
+    <svg height="50" width="250" viewBox="0 0 250 50" class="chart">
+     <polyline id="chart_humidity"
+     fill="none"
+     stroke="#0074d9"
+     stroke-width="3"
+     points="0,0 20,40, 40,32 60,45, 80,20"/>
+    </svg>
+  </p>
+  <p>
+    <span class="sensor-labels">Pressure (950-1050)</span>
+    <span id="pressure">%PRESSURE%</span>
+    <sup class="units">hPa</sup>
+
+    <br>
+    <svg height="50" width="250" viewBox="0 0 250 50" class="chart">
+     <polyline id="chart_pressure"
+     fill="none"
+     stroke="#0074d9"
+     stroke-width="3"
+     points="0,0 20,40, 40,32 60,45, 80,20"/>
+    </svg>
+  </p>
+  <p>
+    <span class="sensor-labels">CO2 (400-1000)</span>
+    <span id="co2">%CO2%</span>
+    <sup class="units">PPM</sup>
+
+    <br>
+    <svg height="50" width="250" viewBox="0 0 250 50" class="chart">
+     <polyline id="chart_co2"
+     fill="none"
+     stroke="#0074d9"
+     stroke-width="3"
+     points="0,0 20,40, 40,32 60,45, 80,20"/>
+    </svg>
+  </p>
+  <p>
+    <span class="sensor-labels">TVOC (0-1000)</span>
+    <span id="tvoc">%TVOC%</span>
+    <sup class="units">mg/m3</sup>
+
+    <br>
+    <svg height="50" width="250" viewBox="0 0 250 50" class="chart">
+     <polyline id="chart_tvoc"
+     fill="none"
+     stroke="#0074d9"
+     stroke-width="3"
+     points="0,0 20,40, 40,32 60,45, 80,20"/>
+    </svg>
+  </p>
+  <p>
+    <span class="sensor-labels">Wind (0-100)</span>
+    <span id="wind">%WIND%</span>
+    <sup class="units">RPM</sup>
+
+    <br>
+    <svg height="50" width="250" viewBox="0 0 250 50" class="chart">
+     <polyline id="chart_wind"
+     fill="none"
+     stroke="#0074d9"
+     stroke-width="3"
+     points="0,0 20,40, 40,32 60,45, 80,20"/>
+    </svg>
+  </p>
+</body>
+<script>
+
+	
+    function create_chart(cid, cw, ch, minValue, maxValue){
+
+	var new_chart = {
+	    id: cid,
+	    chartwidth: cw,
+    	    chartheight: ch,
+    	    minvalue: minValue,
+    	    maxvalue: maxValue,
+	    slope: 0,
+
+	    values: [],
+	
+	    render: function(){
+
+	        this.slope = (this.chartheight - 0) / (this.maxvalue - this.minvalue);
+
+                var pointsstring = "";
+    
+                for(i = 0; i<this.values.length; i++){
+                    var input = this.values[i];
+
+		    console.log(this.slope);
+                    var output = this.chartheight - this.slope * (input - this.minvalue);
+	        
+    	            pointsstring += (i*(this.chartwidth/(this.values.length-1))) + "," + output+" ";
+            
+		}
+
+		document.getElementById(this.id).setAttribute("points", pointsstring);
+	    }
+        };
+    
+
+	return new_chart;
+
+    }
+
+
+    temperature_chart = create_chart("chart_temperature", 250, 50, 20, 50);
+    humidity_chart = create_chart("chart_humidity", 250, 50, 0, 100);
+    pressure_chart = create_chart("chart_pressure", 250, 50, 950, 1050);
+    co2_chart = create_chart("chart_co2", 250, 50, 400, 1000);
+    tvoc_chart = create_chart("chart_tvoc", 250, 50, 0, 1000);
+    wind_chart = create_chart("chart_wind", 250, 50, 0, 100);
+
+
+
+
+  function led_on(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("led").innerHTML = this.responseText;
+      }
+    };    
+    xhttp.open("GET", "/on", true);
+    xhttp.send();   
+
+  }
+
+  function led_off(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("led").innerHTML = this.responseText;
+      }
+    };    
+    xhttp.open("GET", "/off", true);
+    xhttp.send();   
+
+  }
+
+  setInterval(function ( ) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+
+	var result = JSON.parse(this.responseText);
+
+	if (parseFloat(result.wind).isNaN){
+		result.wind = 0;
+	}
+
+	if (!isFinite(parseFloat(result.wind))){
+		result.wind = 0;
+	}
+
+    temperature_chart.values.push(result.temperature1);
+    humidity_chart.values.push(result.humidity);
+    pressure_chart.values.push(result.pressure);
+    co2_chart.values.push(result.co2);
+    tvoc_chart.values.push(result.tvoc);
+    wind_chart.values.push(result.wind);
+
+    temperature_chart.render();
+    humidity_chart.render();
+    pressure_chart.render();
+    co2_chart.render()
+    tvoc_chart.render()
+    wind_chart.render()
+
+        document.getElementById("temperature").innerHTML = result.temperature1;
+        document.getElementById("humidity").innerHTML = result.humidity;
+        document.getElementById("pressure").innerHTML = result.pressure;
+        document.getElementById("co2").innerHTML = result.co2;
+        document.getElementById("tvoc").innerHTML = result.tvoc;
+        document.getElementById("rssi").innerHTML = result.rssi;
+      }
+    };
+    xhttp.open("GET", "/status", true);
+    xhttp.send();
+  }, 2500) ;
+
+</script>
+</html>

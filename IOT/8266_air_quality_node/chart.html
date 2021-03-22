@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My first SVG</h1>
+
+<svg height="50" width="250" viewBox="0 0 250 50" class="chart">
+  <polyline id="chart_co2"
+     fill="none"
+     stroke="#0074d9"
+     stroke-width="3"
+     points="0,0 20,40, 40,32 60,45, 80,20"/>
+</svg>
+   Sorry, your browser does not support inline SVG.
+
+<script>
+	
+    function create_chart(cid, cw, ch, minValue, maxValue){
+
+	var new_chart = {
+	    id: cid,
+	    chartwidth: cw,
+    	    chartheight: ch,
+    	    minvalue: minValue,
+    	    maxvalue: maxValue,
+	    slope: 0,
+
+	    values: [],
+	
+	    render: function(){
+
+	        this.slope = (this.chartheight - 0) / (this.maxvalue - this.minvalue);
+
+                var pointsstring = "";
+    
+                for(i = 0; i<this.values.length; i++){
+                    var input = this.values[i];
+
+		    console.log(this.slope);
+                    var output = this.chartheight - this.slope * (input - this.minvalue);
+	        
+    	            pointsstring += (i*(this.chartwidth/(this.values.length-1))) + "," + output+" ";
+            
+		}
+
+		document.getElementById(this.id).setAttribute("points", pointsstring);
+	    }
+        };
+    
+
+	return new_chart;
+
+    }
+
+
+    temperature_chart = create_chart("chart_co2", 250, 50, 0, 100);
+
+    var counter = 10;
+
+    setInterval(function(){
+
+	temperature_chart.values.push(counter);
+	counter += 10;
+	temperature_chart.render();
+	
+    }, 2000);
+
+</script>
+ 
+</body>
+</html>
