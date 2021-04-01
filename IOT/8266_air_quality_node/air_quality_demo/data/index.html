@@ -11,150 +11,217 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <p>GPIO state<strong id="led"> %STATE%</strong></p>
-  <p>
-    <button onclick="led_on();" class="button">ON</button>
-    <button onclick="led_off();" class="button button2">OFF</button>
-  </p>  
-  <p>
-    <span class="sensor-labels">RSSI</span>
-    <span id="rssi">%RSSI%</span>
-    <sup class="units">dBm</sup>
-  </p>
-  <p>
-    <span class="sensor-labels">Temperature (20-50)</span>
-    <span id="temperature">%TEMPERATURE%</span>
-    <sup class="units">&deg;C</sup>
 
-    <br>
-    <svg height="50" width="250" viewBox="0 0 250 50" class="chart">
-     <polyline id="chart_temperature"
-     fill="none"
-     stroke="#0074d9"
-     stroke-width="3"
-     points="0,0 20,40, 40,32 60,45, 80,20"/>
-    </svg>
-  </p>
-  <p>
-    <span class="sensor-labels">Humidity (0-100)</span>
-    <span id="humidity">%HUMIDITY%</span>
-    <sup class="units">&#37;</sup>
 
-    <br>
-    <svg height="50" width="250" viewBox="0 0 250 50" class="chart">
-     <polyline id="chart_humidity"
-     fill="none"
-     stroke="#0074d9"
-     stroke-width="3"
-     points="0,0 20,40, 40,32 60,45, 80,20"/>
-    </svg>
-  </p>
-  <p>
-    <span class="sensor-labels">Pressure (950-1050)</span>
-    <span id="pressure">%PRESSURE%</span>
-    <sup class="units">hPa</sup>
+  <div class="sensorcontaioner">
+    <div class="sensorbox">
 
-    <br>
-    <svg height="50" width="250" viewBox="0 0 250 50" class="chart">
-     <polyline id="chart_pressure"
-     fill="none"
-     stroke="#0074d9"
-     stroke-width="3"
-     points="0,0 20,40, 40,32 60,45, 80,20"/>
-    </svg>
-  </p>
-  <p>
-    <span class="sensor-labels">CO2 (400-1000)</span>
-    <span id="co2">%CO2%</span>
-    <sup class="units">PPM</sup>
+      <div class="sensortext">
+        <div>GPIO state<div id="led"> %STATE%</div></div>
+        <div>
+          <button onclick="led_on();" class="button">ON</button>
+          <button onclick="led_off();" class="button button2">OFF</button>
+        </div>  
+      </div>
+    
+    
+    
+    </div>
 
-    <br>
-    <svg height="50" width="250" viewBox="0 0 250 50" class="chart">
-     <polyline id="chart_co2"
-     fill="none"
-     stroke="#0074d9"
-     stroke-width="3"
-     points="0,0 20,40, 40,32 60,45, 80,20"/>
-    </svg>
-  </p>
-  <p>
-    <span class="sensor-labels">TVOC (0-1000)</span>
-    <span id="tvoc">%TVOC%</span>
-    <sup class="units">mg/m3</sup>
 
-    <br>
-    <svg height="50" width="250" viewBox="0 0 250 50" class="chart">
-     <polyline id="chart_tvoc"
-     fill="none"
-     stroke="#0074d9"
-     stroke-width="3"
-     points="0,0 20,40, 40,32 60,45, 80,20"/>
-    </svg>
-  </p>
-  <p>
-    <span class="sensor-labels">Wind (0-100)</span>
-    <span id="wind">%WIND%</span>
-    <sup class="units">RPM</sup>
 
-    <br>
-    <svg height="50" width="250" viewBox="0 0 250 50" class="chart">
-     <polyline id="chart_wind"
-     fill="none"
-     stroke="#0074d9"
-     stroke-width="3"
-     points="0,0 20,40, 40,32 60,45, 80,20"/>
-    </svg>
-  </p>
+    <div class="sensorbox">
+      <div class="sensortext">
+        <div class="sensor-labels">RSSI</div>
+        <div class="reading"><span id="rssi">0</span><span class="units"> dBm</span></div>
+      </div>
+
+      <input id="max_rssi" class="range max" type ="text" value="0">
+      <input id="min_rssi" class="range min" type ="text" value="-100">
+
+      <svg height="250" width="250" viewBox="0 0 250 250" class="chart">
+      <polyline id="chart_rssi"
+      fill="none"
+      stroke="#0074d9"
+      stroke-width="3"
+      points="0,0 20,40, 40,32 60,45, 80,20"/>
+      </svg>
+
+    </div>
+    <div class="sensorbox">
+
+
+      <div class="sensortext">
+        <div class="sensor-labels">Temperature</div>
+        <div class="reading"><span id="temperature">0</span><span class="units"> &deg;C</span></div>
+      </div>
+
+      <input id="max_temperature" class="range max" type ="text" value="50">
+      <input id="min_temperature" class="range min" type ="text" value="20">
+
+      <svg height="250" width="250" viewBox="0 0 250 250" class="chart">
+      <polyline id="chart_temperature"
+      fill="none"
+      stroke="#0074d9"
+      stroke-width="3"
+      points="0,0 20,40, 40,32 60,45, 80,20"/>
+      </svg>
+    </div>
+
+
+    <div class="sensorbox">
+
+      <div class="sensortext">
+        <div class="sensor-labels">Humidity</div>
+        <div class="reading"><span id="humidity">0</span><span class="units"> %</span></div>
+      </div>
+
+      <input id="max_humidity" class="range max" type ="text" value="100">
+      <input id="min_humidity" class="range min" type ="text" value="0">
+
+
+      <svg height="250" width="250" viewBox="0 0 250 250" class="chart">
+      <polyline id="chart_humidity"
+      fill="none"
+      stroke="#0074d9"
+      stroke-width="3"
+      points="0,0 20,40, 40,32 60,45, 80,20"/>
+      </svg>
+    </div>
+
+
+  </div> 
+  <div class="sensorcontaioner"> 
+
+
+    <div class="sensorbox">
+
+      <div class="sensortext">
+        <div class="sensor-labels">Humidity</div>
+        <div class="reading"><span id="pressure">0</span><span class="units"> hPa</span></div>
+      </div>
+
+      <input id="max_pressure" class="range max" type ="text" value="1050">
+      <input id="min_pressure" class="range min" type ="text" value="950">
+
+      <svg height="250" width="250" viewBox="0 0 250 250" class="chart">
+      <polyline id="chart_pressure"
+      fill="none"
+      stroke="#0074d9"
+      stroke-width="3"
+      points="0,0 20,40, 40,32 60,45, 80,20"/>
+      </svg>
+    </div>
+
+    <div class="sensorbox">
+
+      <div class="sensortext">
+        <div class="sensor-labels">CO2</div>
+        <div class="reading"><span id="co2">0</span><span class="units"> PPM</span></div>
+      </div>
+
+      <input id="max_co2" class="range max" type ="text" value="4000">
+      <input id="min_co2" class="range min" type ="text" value="400">
+      
+      <svg height="250" width="250" viewBox="0 0 250 250" class="chart">
+      <polyline id="chart_co2"
+      fill="none"
+      stroke="#0074d9"
+      stroke-width="3"
+      points="0,0 20,40, 40,32 60,45, 80,20"/>
+      </svg>
+    </div>
+
+
+    <div class="sensorbox">
+
+      <div class="sensortext">
+        <div class="sensor-labels">TVOC</div>
+        <div class="reading"><span id="tvoc">0</span><span class="units"> mg/m3</span></div>
+      </div>
+
+      <input id="max_tvoc" class="range max" type ="text" value="1000">
+      <input id="min_tvoc" class="range min" type ="text" value="0">
+      
+      <svg height="250" width="250" viewBox="0 0 250 250" class="chart">
+      <polyline id="chart_tvoc"
+      fill="none"
+      stroke="#0074d9"
+      stroke-width="3"
+      points="0,0 20,40, 40,32 60,45, 80,20"/>
+      </svg>
+    </div>
+    <div class="sensorbox">
+
+      <div class="sensortext">
+        <div class="sensor-labels">Airflow</div>
+        <div class="reading"><span id="wind">0</span><span class="units"> RPM</span></div>
+      </div>
+
+      <input id="max_wind" class="range max" type ="text" value="100">
+      <input id="min_wind" class="range min" type ="text" value="0">
+      
+      <svg height="250" width="250" viewBox="0 0 250 250" class="chart">
+      <polyline id="chart_wind"
+      fill="none"
+      stroke="#0074d9"
+      stroke-width="3"
+      points="0,0 20,40, 40,32 60,45, 80,20"/>
+      </svg>
+    </div>
+  </div>
 </body>
 <script>
 
 	
-    function create_chart(cid, cw, ch, minValue, maxValue){
+  function create_chart(cid, cw, ch, minValue, maxValue){
 
-	var new_chart = {
-	    id: cid,
-	    chartwidth: cw,
-    	    chartheight: ch,
-    	    minvalue: minValue,
-    	    maxvalue: maxValue,
-	    slope: 0,
+    var new_chart = {
+      id: cid,
+      chartwidth: cw,
+          chartheight: ch,
+          minvalue: minValue,
+          maxvalue: maxValue,
+      slope: 0,
 
-	    values: [],
-	
-	    render: function(){
+      values: [],
+  
+      render: function(){
 
-	        this.slope = (this.chartheight - 0) / (this.maxvalue - this.minvalue);
+        this.slope = (this.chartheight - 0) / (this.maxvalue - this.minvalue);
 
-                var pointsstring = "";
+          var pointsstring = "";
+
+          for(i = 0; i<this.values.length; i++){
+
+            var input = this.values[i];
+            console.log(this.slope);
+            var output = this.chartheight - this.slope * (input - this.minvalue);
     
-                for(i = 0; i<this.values.length; i++){
-                    var input = this.values[i];
+            pointsstring += (i*(this.chartwidth/(this.values.length-1))) + "," + output+" ";
+      
+          }
 
-		    console.log(this.slope);
-                    var output = this.chartheight - this.slope * (input - this.minvalue);
-	        
-    	            pointsstring += (i*(this.chartwidth/(this.values.length-1))) + "," + output+" ";
-            
-		}
+          document.getElementById("chart_"+this.id).setAttribute("points", pointsstring);
+      }
+    };
+    
+	  return new_chart;
+  }
 
-		document.getElementById(this.id).setAttribute("points", pointsstring);
-	    }
-        };
+
     
 
-	return new_chart;
+  rssi_chart = create_chart("rssi", 250, 50, -100, 0);
 
-    }
+  temperature_chart = create_chart("temperature", 250, 250, 20, 50);
+  humidity_chart = create_chart("humidity", 250, 250, 0, 100);
+  pressure_chart = create_chart("pressure", 250, 250, 950, 1050);
+  co2_chart = create_chart("co2", 250, 250, 400, 4000);
+  tvoc_chart = create_chart("tvoc", 250, 250, 0, 1000);
+  wind_chart = create_chart("wind", 250, 250, 0, 100);
 
-
-    temperature_chart = create_chart("chart_temperature", 250, 50, 20, 50);
-    humidity_chart = create_chart("chart_humidity", 250, 50, 0, 100);
-    pressure_chart = create_chart("chart_pressure", 250, 50, 950, 1050);
-    co2_chart = create_chart("chart_co2", 250, 50, 400, 1000);
-    tvoc_chart = create_chart("chart_tvoc", 250, 50, 0, 1000);
-    wind_chart = create_chart("chart_wind", 250, 50, 0, 100);
-
-
+  var chartlist = [rssi_chart, temperature_chart, humidity_chart, pressure_chart, co2_chart, tvoc_chart, wind_chart];
 
 
   function led_on(){
@@ -186,29 +253,31 @@
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
 
-	var result = JSON.parse(this.responseText);
+        var result = JSON.parse(this.responseText);
 
-	if (parseFloat(result.wind).isNaN){
-		result.wind = 0;
-	}
+        if (parseFloat(result.wind).isNaN){
+          result.wind = 0;
+        }
 
-	if (!isFinite(parseFloat(result.wind))){
-		result.wind = 0;
-	}
+        if (!isFinite(parseFloat(result.wind))){
+          result.wind = 0;
+        }
 
-    temperature_chart.values.push(result.temperature1);
-    humidity_chart.values.push(result.humidity);
-    pressure_chart.values.push(result.pressure);
-    co2_chart.values.push(result.co2);
-    tvoc_chart.values.push(result.tvoc);
-    wind_chart.values.push(result.wind);
+        rssi_chart.values.push(result.rssi);
+        temperature_chart.values.push(result.temperature1);
+        humidity_chart.values.push(result.humidity);
+        pressure_chart.values.push(result.pressure);
+        co2_chart.values.push(result.co2);
+        tvoc_chart.values.push(result.tvoc);
+        wind_chart.values.push(result.wind);
 
-    temperature_chart.render();
-    humidity_chart.render();
-    pressure_chart.render();
-    co2_chart.render()
-    tvoc_chart.render()
-    wind_chart.render()
+        rssi_chart.render();
+        temperature_chart.render();
+        humidity_chart.render();
+        pressure_chart.render();
+        co2_chart.render()
+        tvoc_chart.render()
+        wind_chart.render()
 
         document.getElementById("temperature").innerHTML = result.temperature1;
         document.getElementById("humidity").innerHTML = result.humidity;

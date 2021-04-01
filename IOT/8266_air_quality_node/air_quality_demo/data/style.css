@@ -8,16 +8,11 @@ html {
   display: inline-block;
   margin: 0px auto;
   text-align: center;
-}
-h1 {
-  color: #0F3376;
-  padding: 2vh;
-}
-p {
-  font-size: 1.5rem;
+  background-color: black;
 }
 svg{
-  background-color: #E6DFDF
+  width: 100%;
+  height: auto;
 }
 .button {
   display: inline-block;
@@ -25,20 +20,91 @@ svg{
   border: none;
   border-radius: 4px;
   color: white;
-  padding: 16px 40px;
+  width: clac(50% -20px);
   text-decoration: none;
-  font-size: 30px;
-  margin: 2px;
   cursor: pointer;
+
+
+  font-size: min(3vw, 16px);
 }
 .button2 {
   background-color: #f44336;
 }
-.units {
-  font-size: 1.2rem;
- }
-.sensor-labels {
-  font-size: 1.5rem;
-  vertical-align:middle;
-  padding-bottom: 15px;
+
+.sensorcontaioner{
+
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.sensorbox{
+  background-color: rgb(230, 213, 213);
+  flex: 1 1 0px;
+  position: relative;
+  margin: 5px;
+  text-align: center;
+  min-width: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.sensorbox > svg{
+  display: block;
+}
+
+.sensorbox > .sensortext{
+
+  font-size: min(3vw, 16px);
+  width: 100%;
+  height: fit-content;
+  text-align: center;
+  display: block;
+  position: absolute;
+  z-index: 10;
+  color: rgba(0,0,0,0.8)
+}
+
+.reading{
+
+font-weight: bolder;
+font-size: 150%;
+
+}
+
+input.range{
+
+  font-size: min(3vw, 16px);
+  width: 40%;
+  max-width: 60px;
+  position: absolute;
+  border: none;
+  background-color: rgba(0,0,0,0);
+  color: rgba(0,0,0,0.4);
+
+  border-radius: 3px; 
+}
+
+input.range:hover{
+
+  background-color: rgba(0,0,0,0.05);
+  color: rgba(0,0,0,0.7);
+}
+input.range:focus{
+
+  background-color: rgba(0,0,0,0.05);
+  color: rgba(0,0,0,0.7);
+}
+
+input.range.max{
+
+  top:0px;
+  left: 0px;
+
+}
+
+input.range.min{
+
+  bottom: 0px;
+  left: 0px;
 }
