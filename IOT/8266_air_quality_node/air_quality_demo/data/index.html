@@ -188,6 +188,7 @@
   
       render: function(){
 
+
         this.slope = (this.chartheight - 0) / (this.maxvalue - this.minvalue);
 
           var pointsstring = "";
@@ -212,7 +213,7 @@
 
     
 
-  rssi_chart = create_chart("rssi", 250, 50, -100, 0);
+  rssi_chart = create_chart("rssi", 250, 250, -100, 0);
 
   temperature_chart = create_chart("temperature", 250, 250, 20, 50);
   humidity_chart = create_chart("humidity", 250, 250, 0, 100);
