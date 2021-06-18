@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DesktopLabel Version="1">
+  <DYMOLabel Version="3">
+    <Description>DYMO Label</Description>
+    <Orientation>Portrait</Orientation>
+    <LabelName>1933083 Drbl 1 x 1 in</LabelName>
+    <InitialLength>0</InitialLength>
+    <BorderStyle>SolidLine</BorderStyle>
+    <DYMORect>
+      <DYMOPoint>
+        <X>0.03999997</X>
+        <Y>0.1</Y>
+      </DYMOPoint>
+      <Size>
+        <Width>0.9033334</Width>
+        <Height>0.84</Height>
+      </Size>
+    </DYMORect>
+    <BorderColor>
+      <SolidColorBrush>
+        <Color A="1" R="0" G="0" B="0"></Color>
+      </SolidColorBrush>
+    </BorderColor>
+    <BorderThickness>1</BorderThickness>
+    <Show_Border>False</Show_Border>
+    <DynamicLayoutManager>
+      <RotationBehavior>ClearObjects</RotationBehavior>
+      <LabelObjects>
+        <TextObject>
+          <Name>ITextObject1</Name>
+          <Brushes>
+            <BackgroundBrush>
+              <SolidColorBrush>
+                <Color A="0" R="0" G="0" B="0"></Color>
+              </SolidColorBrush>
+            </BackgroundBrush>
+            <BorderBrush>
+              <SolidColorBrush>
+                <Color A="1" R="0" G="0" B="0"></Color>
+              </SolidColorBrush>
+            </BorderBrush>
+            <StrokeBrush>
+              <SolidColorBrush>
+                <Color A="1" R="0" G="0" B="0"></Color>
+              </SolidColorBrush>
+            </StrokeBrush>
+            <FillBrush>
+              <SolidColorBrush>
+                <Color A="0" R="0" G="0" B="0"></Color>
+              </SolidColorBrush>
+            </FillBrush>
+          </Brushes>
+          <Rotation>Rotation0</Rotation>
+          <OutlineThickness>1</OutlineThickness>
+          <IsOutlined>True</IsOutlined>
+          <BorderStyle>SolidLine</BorderStyle>
+          <Margin>
+            <DYMOThickness Left="0" Top="0" Right="0" Bottom="0" />
+          </Margin>
+          <HorizontalAlignment>Center</HorizontalAlignment>
+          <VerticalAlignment>Middle</VerticalAlignment>
+          <FitMode>None</FitMode>
+          <IsVertical>False</IsVertical>
+          <FormattedText>
+            <FitMode>None</FitMode>
+            <HorizontalAlignment>Center</HorizontalAlignment>
+            <VerticalAlignment>Middle</VerticalAlignment>
+            <IsVertical>False</IsVertical>
+            <LineTextSpan>
+              <TextSpan>
+                <Text>IPA</Text>
+                <FontInfo>
+                  <FontName>Segoe UI</FontName>
+                  <FontSize>10</FontSize>
+                  <IsBold>True</IsBold>
+                  <IsItalic>False</IsItalic>
+                  <IsUnderline>False</IsUnderline>
+                  <FontBrush>
+                    <SolidColorBrush>
+                      <Color A="1" R="0" G="0" B="0"></Color>
+                    </SolidColorBrush>
+                  </FontBrush>
+                </FontInfo>
+              </TextSpan>
+            </LineTextSpan>
+          </FormattedText>
+          <ObjectLayout>
+            <DYMOPoint>
+              <X>0.06000001</X>
+              <Y>0.1</Y>
+            </DYMOPoint>
+            <Size>
+              <Width>0.8800001</Width>
+              <Height>0.2161475</Height>
+            </Size>
+          </ObjectLayout>
+        </TextObject>
+        <TextObject>
+          <Name>ITextObject12</Name>
+          <Brushes>
+            <BackgroundBrush>
+              <SolidColorBrush>
+                <Color A="1" R="0" G="0" B="0"></Color>
+              </SolidColorBrush>
+            </BackgroundBrush>
+            <BorderBrush>
+              <SolidColorBrush>
+                <Color A="1" R="0" G="0" B="0"></Color>
+              </SolidColorBrush>
+            </BorderBrush>
+            <StrokeBrush>
+              <SolidColorBrush>
+                <Color A="1" R="0" G="0" B="0"></Color>
+              </SolidColorBrush>
+            </StrokeBrush>
+            <FillBrush>
+              <SolidColorBrush>
+                <Color A="0" R="0" G="0" B="0"></Color>
+              </SolidColorBrush>
+            </FillBrush>
+          </Brushes>
+          <Rotation>Rotation0</Rotation>
+          <OutlineThickness>1</OutlineThickness>
+          <IsOutlined>True</IsOutlined>
+          <BorderStyle>SolidLine</BorderStyle>
+          <Margin>
+            <DYMOThickness Left="0" Top="0" Right="0" Bottom="0" />
+          </Margin>
+          <HorizontalAlignment>Center</HorizontalAlignment>
+          <VerticalAlignment>Middle</VerticalAlignment>
+          <FitMode>None</FitMode>
+          <IsVertical>False</IsVertical>
+          <FormattedText>
+            <FitMode>None</FitMode>
+            <HorizontalAlignment>Center</HorizontalAlignment>
+            <VerticalAlignment>Middle</VerticalAlignment>
+            <IsVertical>False</IsVertical>
+            <LineTextSpan>
+              <TextSpan>
+                <Text>azurvegyszer.hu</Text>
+                <FontInfo>
+                  <FontName>Segoe UI</FontName>
+                  <FontSize>6</FontSize>
+                  <IsBold>False</IsBold>
+                  <IsItalic>False</IsItalic>
+                  <IsUnderline>False</IsUnderline>
+                  <FontBrush>
+                    <SolidColorBrush>
+                      <Color A="1" R="1" G="1" B="1"></Color>
+                    </SolidColorBrush>
+                  </FontBrush>
+                </FontInfo>
+              </TextSpan>
+            </LineTextSpan>
+          </FormattedText>
+          <ObjectLayout>
+            <DYMOPoint>
+              <X>0.06000001</X>
+              <Y>0.2901042</Y>
+            </DYMOPoint>
+            <Size>
+              <Width>0.8800003</Width>
+              <Height>0.1604166</Height>
+            </Size>
+          </ObjectLayout>
+        </TextObject>
+        <QRCodeObject>
+          <Name>IQRCodeObject0</Name>
+          <Brushes>
+            <BackgroundBrush>
+              <SolidColorBrush>
+                <Color A="1" R="1" G="1" B="1"></Color>
+              </SolidColorBrush>
+            </BackgroundBrush>
+            <BorderBrush>
+              <SolidColorBrush>
+                <Color A="1" R="0" G="0" B="0"></Color>
+              </SolidColorBrush>
+            </BorderBrush>
+            <StrokeBrush>
+              <SolidColorBrush>
+                <Color A="1" R="0" G="0" B="0"></Color>
+              </SolidColorBrush>
+            </StrokeBrush>
+            <FillBrush>
+              <SolidColorBrush>
+                <Color A="1" R="0" G="0" B="0"></Color>
+              </SolidColorBrush>
+            </FillBrush>
+          </Brushes>
+          <Rotation>Rotation0</Rotation>
+          <OutlineThickness>1</OutlineThickness>
+          <IsOutlined>False</IsOutlined>
+          <BorderStyle>SolidLine</BorderStyle>
+          <Margin>
+            <DYMOThickness Left="0" Top="0" Right="0" Bottom="0" />
+          </Margin>
+          <BarcodeFormat>QRCode</BarcodeFormat>
+          <Data>
+            <DataString>URL:http://azurvegyszer.hu</DataString>
+          </Data>
+          <HorizontalAlignment>Center</HorizontalAlignment>
+          <VerticalAlignment>Middle</VerticalAlignment>
+          <Size>Medium</Size>
+          <EQRCodeType>QRCodeWebPage</EQRCodeType>
+          <WebAddressDataHolder>
+            <MultiDataString>
+              <DataString>http://azurvegyszer.hu</DataString>
+            </MultiDataString>
+          </WebAddressDataHolder>
+          <ObjectLayout>
+            <DYMOPoint>
+              <X>0.4883334</X>
+              <Y>0.5</Y>
+            </DYMOPoint>
+            <Size>
+              <Width>0.4516667</Width>
+              <Height>0.42</Height>
+            </Size>
+          </ObjectLayout>
+        </QRCodeObject>
+        <ImageObject>
+          <Name>IImageObject1</Name>
+          <Brushes>
+            <BackgroundBrush>
+              <SolidColorBrush>
+                <Color A="0" R="0" G="0" B="0"></Color>
+              </SolidColorBrush>
+            </BackgroundBrush>
+            <BorderBrush>
+              <SolidColorBrush>
+                <Color A="1" R="0" G="0" B="0"></Color>
+              </SolidColorBrush>
+            </BorderBrush>
+            <StrokeBrush>
+              <SolidColorBrush>
+                <Color A="1" R="0" G="0" B="0"></Color>
+              </SolidColorBrush>
+            </StrokeBrush>
+            <FillBrush>
+              <SolidColorBrush>
+                <Color A="0" R="0" G="0" B="0"></Color>
+              </SolidColorBrush>
+            </FillBrush>
+          </Brushes>
+          <Rotation>Rotation0</Rotation>
+          <OutlineThickness>1</OutlineThickness>
+          <IsOutlined>False</IsOutlined>
+          <BorderStyle>SolidLine</BorderStyle>
+          <Margin>
+            <DYMOThickness Left="0" Top="0" Right="0" Bottom="0" />
+          </Margin>
+          <Data>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</Data>
+          <ScaleMode>Uniform</ScaleMode>
+          <HorizontalAlignment>Center</HorizontalAlignment>
+          <VerticalAlignment>Middle</VerticalAlignment>
+          <ObjectLayout>
+            <DYMOPoint>
+              <X>0.04999997</X>
+              <Y>0.4999999</Y>
+            </DYMOPoint>
+            <Size>
+              <Width>0.4516667</Width>
+              <Height>0.42</Height>
+            </Size>
+          </ObjectLayout>
+        </ImageObject>
+      </LabelObjects>
+    </DynamicLayoutManager>
+  </DYMOLabel>
+  <LabelApplication>Blank</LabelApplication>
+  <DataTable>
+    <Columns></Columns>
+    <Rows></Rows>
+  </DataTable>
+</DesktopLabel>
