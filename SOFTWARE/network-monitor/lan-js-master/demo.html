@@ -1,5 +1,3 @@
-
-
 <!doctype html>
 <html>
 
@@ -32,6 +30,7 @@
       From:  
       <input type="text" id="from" value="0">
       To: <input type="text" id="to" value="20">
+      String: <input type="text" id="string" value="blog">
       <button id='b' onclick='scan()'>Scan</button>
     </div>
   </label>
@@ -58,12 +57,64 @@
 
 <script>
 
+  function hslToHex(h, s, l) {
+    l /= 100;
+    const a = s * Math.min(l, 1 - l) / 100;
+    const f = n => {
+      const k = (n + h / 30) % 12;
+      const color = l - a * Math.max(Math.min(k - 3, 9 - k, 1), -1);
+      return Math.round(255 * color).toString(16).padStart(2, '0');   // convert to Hex and prefix "0" if needed
+    };
+    var color = `#${f(0)}${f(8)}${f(4)}`;
+  }
+
+  function stringToColor(string) {
+
+    // Generte Hash
+
+    var hash = 0;
+    if (string.length == 0)
+        return hash;
+    for (let i = 0; i < string.length; i++) {
+        var charCode = string.charCodeAt(i);
+        hash = ((hash << 7) - hash) + charCode;
+        hash = hash & hash;
+    }
+
+    // define the color params
+
+    var hue = Math.abs(hash)%360; // degrees
+    var sat = 65; // percentage
+    var lum = 50; // percentage
+
+    // convert from HSL to RGB
+
+    lum /= 100;
+    const a = sat * Math.min(lum, 1 - lum) / 100;
+    const f = n => {
+      const k = (n + hue / 30) % 12;
+      const col = lum - a * Math.max(Math.min(k - 3, 9 - k, 1), -1);
+      return Math.round(255 * col).toString(16).padStart(2, '0');   // convert to Hex and prefix "0" if needed
+    };
+
+    var color = `#${f(0)}${f(8)}${f(4)}`;
+
+    return color;
+  }
+
+
   function log(s) {
     c.innerHTML = '<div>'+s+'</div>' + c.innerHTML;
   }
 
 
   function scan() {
+
+    var tag = document.getElementById("string").value;
+    var color =     stringToColor(tag);
+
+    document.getElementById("string").style.backgroundColor = color;
+
     //b.style.display = 'none';
     c.innerHTML = '';
     c.style.display = 'block';
